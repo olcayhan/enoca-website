@@ -13,16 +13,23 @@ export default function Slider({ news }) {
     }
 
     return (
-        <div className='row mt-5' style={{ height: '26rem' }}>
-            <button className='btn h-25 m-auto' onClick={prevNew}>
+        <div className='slider mt-5'>
+            <button className='btn m-auto' onClick={prevNew}>
                 <i className='fas fa-arrow-left'> </i>
             </button>
-            <div className='col row w-100'>
-                <img src={news[current]?.urlToImage} style={{ width: '50%' }} />
-                <h5 className='col mt-5'>{news[current]?.title}</h5>
+
+            <div className='slider-main bg-light' >
+
+                <img src={news[current]?.urlToImage} />
+
+                <div className='content'>
+                    <h5>{news[current]?.title}</h5>
+                    <p>{news[current]?.description}</p>
+                </div>
 
             </div>
-            <button className='btn  m-auto' onClick={nextNew}>
+
+            <button className='btn m-auto' onClick={nextNew}>
                 <i className='fas fa-arrow-right'> </i>
             </button>
         </div >

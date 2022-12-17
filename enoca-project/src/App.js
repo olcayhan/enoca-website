@@ -7,6 +7,9 @@ import Category from './components/Category';
 function App() {
   return (
     <div className="container">
+
+
+      
       <Header />
 
 

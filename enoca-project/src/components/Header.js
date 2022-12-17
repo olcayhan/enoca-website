@@ -1,31 +1,32 @@
 import React from 'react'
 
 export default function Header() {
+
+
+    let currentPage = window.location.pathname;
+
     return (
-        <header className='mt-5'>
+        <header className='header mt-4'>
+            <div className='header-head'>
+                <h2 className='col-9'>Olcay Han Korkut</h2>
 
-
-            <div className='row'>
-                <h1 className='col'>Olcay Han</h1>
-                {/* <input className='input col w-25 me-auto ' type="text" placeholder='search' />
-                    <button className='btn btn-dark'>Ara</button> */}
-                <div className="form-group row">
-                    <input type="text" className="form-control w-75" placeholder="search" />
-                    <button type="submit" className="btn btn-dark">Ara</button>
+                <div className='row'>
+                    <input type="text" placeholder="Search..." />
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </div>
 
 
             <nav className='navbar navbar-expand-lg navbar-light'>
                 <ul className="navbar-nav">
-                    <li className="nav-item mt-4">
-                        <a className="nav-link text-dark" href="/">Anasayfa</a>
+                    <li className="nav-item ml-4">
+                        <a className="nav-link text-dark" style={currentPage === "/" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/" >Anasayfa</a>
                     </li>
-                    <li class="nav-item m-4">
-                        <a className="nav-link text-dark" href="/category">Kategori</a>
+                    <li class="nav-item ml-4 ">
+                        <a className="nav-link text-dark" style={currentPage === "/category" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/category" >Kategori</a>
                     </li>
-                    <li className="nav-item m-4">
-                        <a className="nav-link text-dark" href="#">Hakkimda</a>
+                    <li className="nav-item  ml-4">
+                        <a className="nav-link text-dark" style={currentPage === "/about" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/about">Hakkımda</a>
                     </li>
 
                 </ul>
@@ -34,7 +35,7 @@ export default function Header() {
 
 
 
-
+            <hr />
 
 
         </header>
