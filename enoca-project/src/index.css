@@ -18,4 +18,12 @@ body {
   height: 100px;
 }
 
-.home-card .card-desc {}
+.category{
+  float: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-category{
+  
+}

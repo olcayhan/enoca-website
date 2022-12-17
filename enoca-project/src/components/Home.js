@@ -4,9 +4,17 @@ export default function Home() {
 
     const [news, setNews] = useState([]);
     const [pageNumber, setPageNumber] = useState(0);
+    let slideNews = news.slice(0, 3)
+    let allNews = []
 
+    let tempPage = 3
+    for (let i = 0; i < (news.length / 20); i++) {
+        allNews.push(news.slice(tempPage, tempPage + 20))
+        tempPage = tempPage + 20;
 
+    }
 
+    console.log(allNews)
 
     function fetchData() {
         fetch('https://newsapi.org/v2/top-headlines?country=tr&apiKey=676f017549224f488970f1835f9db971')
@@ -19,19 +27,7 @@ export default function Home() {
 
     useEffect(() => {
         fetchData()
-        setPageNumber(news.length / 20)
-
     }, [])
-
-
-
-
-    console.log(pageNumber)
-
-
-
-
-
 
 
 
@@ -39,11 +35,13 @@ export default function Home() {
 
         <>
 
-            <Slider news={news} />
+            <Slider news={slideNews} />
 
-            <div className='row m-2'>
+
+            <h2 className='m-5'>Haberler</h2>
+            <div className='row m-5' style={{ height: "100%" }}>
                 {
-                    news?.map((item) => {
+                    allNews[pageNumber]?.map((item) => {
                         return (
                             <div className='home-card row m-2'>
                                 <img src={item.urlToImage} />
@@ -56,11 +54,14 @@ export default function Home() {
                 }
             </div>
 
-            <nav aria-label="Page navigation example">
+            <nav>
                 <ul class="pagination justify-content-center">
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    {
+                        allNews?.map((item, key) => {
+                            return (<li class="page-item"><button onClick={() => { setPageNumber(key) }}>{key + 1}</button></li>)
+                        })
+                    }
+
 
                 </ul>
             </nav>
