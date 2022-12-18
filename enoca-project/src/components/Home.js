@@ -16,8 +16,6 @@ export default function Home() {
 
     }
 
-    console.log(allNews)
-
     function fetchData() {
         fetch('https://newsapi.org/v2/top-headlines?country=tr&apiKey=0139e30aec504b85b9ab98994e11fa24')
             .then((res) => res.json())

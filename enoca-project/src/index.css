@@ -146,6 +146,23 @@
   font-size: 1.2rem;
 }
 
+
+
+/* ---------------------------- SEARCH ----------------------------------- */
+
+
+.search-input input {
+  padding: 10px 80px;
+  border-radius: 50px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+
+}
+
+
+
+
+/* -------------------------------MEDIA ------------------------------------ */
 @media (max-width:1000px) {
 
 
