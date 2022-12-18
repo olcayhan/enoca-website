@@ -4,6 +4,7 @@ export default function Home() {
 
     const [news, setNews] = useState([]);
     const [pageNumber, setPageNumber] = useState(0);
+
     let slideNews = news.slice(0, 3)
     let allNews = []
 
@@ -59,7 +60,10 @@ export default function Home() {
                 <ul class="pagination justify-content-center">
                     {
                         allNews?.map((item, key) => {
-                            return (<li class="page-item"><button onClick={() => { setPageNumber(key) }}>{key + 1}</button></li>)
+                            return (
+                                <li className="page-item">
+                                    <button disabled={pageNumber === key && "disabled"} style={{ backgroundColor: "transparent", border: "none", fontSize: "20px" }} onClick={() => { setPageNumber(key) }}>{key + 1}</button>
+                                </li>)
                         })
                     }
 

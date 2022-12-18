@@ -39,7 +39,7 @@ export default function Category() {
                 <button disabled={category === "sports" && "disabled"} onClick={() => { setCategory("sports") }}>sports</button>
                 <button disabled={category === "technology" && "disabled"} onClick={() => { setCategory("technology") }}>technology</button>
             </div>
-
+            <div className='category-line'></div>
 
             <div className='category-news row'>
                 {
