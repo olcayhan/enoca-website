@@ -11,7 +11,7 @@ export default function Header() {
                 <h2 className='col-auto mr-auto'>Olcay Han Korkut</h2>
 
                 <div className='col-auto'>
-                    <input type="text" placeholder="Search..." />
+                    <input type="text" placeholder="Ara..." />
                     <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </div>
@@ -19,17 +19,17 @@ export default function Header() {
 
             <nav className='navbar navbar-expand-lg navbar-light'>
                 <ul className="navbar-nav">
-                    <li className="nav-item ml-4">
-                        <a className="nav-link text-dark" style={currentPage === "/" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/" >Anasayfa</a>
+                    <li className="nav-item ">
+                        <a className="nav-link text-dark px-4" style={currentPage === "/" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/" >Anasayfa</a>
                     </li>
-                    <li class="nav-item ml-4 ">
-                        <a className="nav-link text-dark" style={currentPage === "/category" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/category" >Kategori</a>
+                    <li class="nav-item">
+                        <a className="nav-link text-dark px-4" style={currentPage === "/category" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/category" >Kategori</a>
                     </li>
-                    <li className="nav-item  ml-4">
-                        <a className="nav-link text-dark" style={currentPage === "/search" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/search">Arama</a>
+                    <li className="nav-item">
+                        <a className="nav-link text-dark px-4" style={currentPage === "/search" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/search">Arama</a>
                     </li>
-                    <li className="nav-item  ml-4">
-                        <a className="nav-link text-dark" style={currentPage === "/about" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/about">Hakkımda</a>
+                    <li className="nav-item">
+                        <a className="nav-link text-dark px-4" style={currentPage === "/about" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/about">Hakkımda</a>
                     </li>
 
                 </ul>

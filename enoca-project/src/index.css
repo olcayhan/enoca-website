@@ -8,7 +8,7 @@
 
 
 
-/* --------------------- slider ----------------- */
+/* ---------------------------------- SLIDER ----------------------------------- */
 .slider {
   display: flex;
   flex-direction: row;
@@ -40,26 +40,43 @@
   font-size: 26px;
 }
 
+.slider-footer {
+  border: none;
+  height: 5px;
+  width: 15px;
+  margin: 0 3px;
+
+}
+
+.slider-footer:disabled {
+  background-color: #111;
+  opacity: 0.5;
+}
 
 
-/* --------------------- card ----------------- */
+/* -------------------------------------- CARD ----------------------------------- */
 
 
 
-.home-card {
+.news-card {
   width: 45%;
   font-weight: 600;
   display: flex;
   margin: 5px 10px;
+  transition: all 0.3s ease;
 }
 
-.home-card img {
+.news-card:hover {
+  transform: scale(1.1);
+}
+
+.news-card img {
   width: 30%;
   height: 180px;
 
 }
 
-.home-card .card-desc {
+.news-card .card-desc {
   font-size: .9rem;
   width: 70%;
   padding: 10px 20px;
@@ -68,7 +85,7 @@
 
 
 
-/* --------------------- category ----------------- */
+/* ------------------------------------- CATEGORY -------------------------------- */
 
 .category {
   display: flex;
@@ -93,7 +110,7 @@
 
 .category-line {
   height: auto;
-  width: 2px;
+  width: 1px;
   background-color: #111;
   margin: 10px;
 }
@@ -105,12 +122,11 @@
 
 
 
-/* --------------------header------------------- */
+/* ----------------------------------- HEADER ---------------------------------------- */
 
 .header-head {
   align-items: center;
 }
-
 
 .header-head input {
   margin-right: 18px;
@@ -134,7 +150,7 @@
 
 }
 
-/* ---------- navbar ------------- */
+/* --------------------------- NAVBAR ------------------------------- */
 
 
 .navbar-nav {
@@ -148,7 +164,7 @@
 
 
 
-/* ---------------------------- SEARCH ----------------------------------- */
+/* ---------------------------- SEARCH ---------------------------------- */
 
 
 .search-input input {
@@ -162,7 +178,8 @@
 
 
 
-/* -------------------------------MEDIA ------------------------------------ */
+/* ------------------------------- MEDIA ------------------------------------ */
+
 @media (max-width:1000px) {
 
 
@@ -170,7 +187,7 @@
 
   .slider-main {
     flex-direction: column;
-    height: auto;
+    height: 600px;
 
   }
 
@@ -184,13 +201,11 @@
   }
 
 
-  .home-card {
+  .news-card {
     width: 100%;
     font-weight: 600;
     margin: 5px 10px;
   }
-
-  /* ------------------------ category ------------------------------ */
 
   .category {
     display: flex;
@@ -217,7 +232,5 @@
     height: 1px;
     width: auto;
   }
-
-
 
 }

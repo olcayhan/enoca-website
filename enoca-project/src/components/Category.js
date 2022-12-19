@@ -46,7 +46,7 @@ export default function Category() {
 
                     news?.map((item) => {
                         return (
-                            <div className='home-card bg-light'>
+                            <div className='news-card bg-light'>
                                 <img src={item.urlToImage} />
                                 <div className='card-desc'>
                                     <p>{item.title}</p>

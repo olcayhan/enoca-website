@@ -13,25 +13,37 @@ export default function Slider({ news }) {
     }
 
     return (
-        <div className='slider mt-5'>
-            <button className='btn m-auto' onClick={prevNew}>
-                <i className='fas fa-arrow-left'> </i>
-            </button>
+        <>
+            <div className='slider mt-5'>
+                <button className='btn m-auto' onClick={prevNew}>
+                    <i className='fas fa-arrow-left'> </i>
+                </button>
 
-            <div className='slider-main bg-light' >
+                <div className='slider-main bg-light' >
 
-                <img src={news[current]?.urlToImage} />
+                    <img src={news[current]?.urlToImage} />
 
-                <div className='content'>
-                    <h5>{news[current]?.title}</h5>
-                    <p>{news[current]?.description}</p>
+                    <div className='content'>
+                        <h5>{news[current]?.title}</h5>
+                        <p>{news[current]?.description}</p>
+                    </div>
+
                 </div>
 
+                <button className='btn m-auto' onClick={nextNew}>
+                    <i className='fas fa-arrow-right'> </i>
+                </button>
+            </div >
+
+            <div className='text-center m-2'>
+
+                {
+                    news?.map((item, key) => {
+                        return <button className='slider-footer' disabled={current === key && "disabled"} onClick={() => { setCurrent(key) }}></button>
+                    })
+                }
             </div>
 
-            <button className='btn m-auto' onClick={nextNew}>
-                <i className='fas fa-arrow-right'> </i>
-            </button>
-        </div >
+        </>
     )
 }

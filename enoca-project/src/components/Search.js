@@ -6,6 +6,9 @@ export default function Search() {
     const [pageNumber, setPageNumber] = useState(0);
     const [filter, setFilter] = useState(news);
 
+    useEffect(() => {
+        fetchData()
+    }, [])
 
 
     useEffect(() => {
@@ -14,16 +17,13 @@ export default function Search() {
 
     let allNews = []
     let tempPage = 0
-    for (let i = 0; i < (news.length / 20); i++) {
-        allNews.push(news.slice(tempPage, tempPage + 20))
-        tempPage = tempPage + 20;
+    for (let i = 0; i < (filter.length / 10); i++) {
+        allNews.push(filter.slice(tempPage, tempPage + 10))
+        tempPage = tempPage + 10;
 
     }
 
 
-    useEffect(() => {
-        fetchData()
-    }, [])
 
 
     function fetchData() {
@@ -41,11 +41,13 @@ export default function Search() {
 
     return (
         <div>
+
             <div className='search-input text-center'>
-                <input type="text" placeholder="Aranılacak Kelimeyi Yazınız" onChange={(e) => {
+                <p className='mt-4'>Aranılacak Kelimeyi Yazınız</p>
+                <input type="text" placeholder="Ara..." onChange={(e) => {
                     let newFiltered = []
                     news?.map((item) => {
-                        if (item.title.toLowerCase().includes(e.target.value))
+                        if (item.title.toLowerCase().includes(e.target.value.toLowerCase()))
                             return newFiltered.push(item)
                     })
                     setFilter(newFiltered)
@@ -55,9 +57,9 @@ export default function Search() {
             <h2 className='m-5 text-center'>Haberler</h2>
             <div className='row m-5'>
                 {
-                    filter?.map((item) => {
+                    allNews[pageNumber]?.map((item) => {
                         return (
-                            <div className='home-card bg-light'>
+                            <div className='news-card bg-light'>
                                 <img src={item.urlToImage} />
                                 <div className='card-desc'>
                                     <p>{item.title}</p>
@@ -73,7 +75,7 @@ export default function Search() {
                     {
                         allNews?.map((item, key) => {
                             return (
-                                <li className="page-item">
+                                <li className="page-item m-1">
                                     <button disabled={pageNumber === key && "disabled"} style={{ backgroundColor: "transparent", border: "none", fontSize: "20px" }} onClick={() => { setPageNumber(key) }}>{key + 1}</button>
                                 </li>)
                         })
