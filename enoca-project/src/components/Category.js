@@ -31,13 +31,13 @@ export default function Category() {
 
             <div className='category-categories'>
                 <h2 className='mt-3'>Kategoriler</h2>
-                <button className='mt-3' disabled={category === "general" && "disabled"} onClick={() => { setCategory("general") }}>general</button>
-                <button disabled={category === "business" && "disabled"} onClick={() => { setCategory("business") }}>business</button>
-                <button disabled={category === "entertainment" && "disabled"} onClick={() => { setCategory("entertainment") }}>entertainment</button>
-                <button disabled={category === "health" && "disabled"} onClick={() => { setCategory("health") }}>health</button>
-                <button disabled={category === "science" && "disabled"} onClick={() => { setCategory("science") }}>science</button>
-                <button disabled={category === "sports" && "disabled"} onClick={() => { setCategory("sports") }}>sports</button>
-                <button disabled={category === "technology" && "disabled"} onClick={() => { setCategory("technology") }}>technology</button>
+                <button className='mt-3' disabled={category === "general" && "disabled"} onClick={() => { setCategory("general") }}>Genel</button>
+                <button disabled={category === "business" && "disabled"} onClick={() => { setCategory("business") }}>İşletme</button>
+                <button disabled={category === "entertainment" && "disabled"} onClick={() => { setCategory("entertainment") }}>Eğlence</button>
+                <button disabled={category === "health" && "disabled"} onClick={() => { setCategory("health") }}>Sağlık</button>
+                <button disabled={category === "science" && "disabled"} onClick={() => { setCategory("science") }}>Bilim</button>
+                <button disabled={category === "sports" && "disabled"} onClick={() => { setCategory("sports") }}>Spor</button>
+                <button disabled={category === "technology" && "disabled"} onClick={() => { setCategory("technology") }}>Teknoloji</button>
             </div>
             <div className='category-line'></div>
 

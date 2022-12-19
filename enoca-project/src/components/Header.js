@@ -20,17 +20,40 @@ export default function Header() {
             <nav className='navbar navbar-expand-lg navbar-light'>
                 <ul className="navbar-nav">
                     <li className="nav-item ">
-                        <a className="nav-link text-dark px-4" style={currentPage === "/" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/" >Anasayfa</a>
+                        <a className="nav-link text-dark px-3" style={currentPage === "/" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/" >Anasayfa</a>
                     </li>
                     <li class="nav-item">
-                        <a className="nav-link text-dark px-4" style={currentPage === "/category" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/category" >Kategori</a>
+                        <a className="nav-link text-dark px-3" style={currentPage === "/category" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/category" >Kategori</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link text-dark px-4" style={currentPage === "/search" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/search">Arama</a>
+                        <a className="nav-link text-dark px-3" style={currentPage === "/search" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/search">Arama</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link text-dark px-4" style={currentPage === "/about" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/about">Hakkımda</a>
+                        <a className="nav-link text-dark px-3" style={currentPage === "/general" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/general">Genel</a>
                     </li>
+                    <li className="nav-item">
+                        <a className="nav-link text-dark px-3" style={currentPage === "/business" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/business">İşletme</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link text-dark px-3" style={currentPage === "/entertainment" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/entertainment">Eğlence</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link text-dark px-3" style={currentPage === "/health" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/health">Sağlık</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link text-dark px-3" style={currentPage === "/science" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/science">Bilim</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link text-dark px-3" style={currentPage === "/sports" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/sports">Spor</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link text-dark px-3" style={currentPage === "/technology" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/technology">Teknoloji</a>
+                    </li>
+
+                    <li className="nav-item">
+                        <a className="nav-link text-dark px-3" style={currentPage === "/about" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/about">Hakkımda</a>
+                    </li>
+
 
                 </ul>
             </nav>

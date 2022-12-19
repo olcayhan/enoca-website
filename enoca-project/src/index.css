@@ -159,7 +159,8 @@
 }
 
 .navbar-nav li {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 
@@ -168,10 +169,11 @@
 
 
 .search-input input {
-  padding: 10px 80px;
+  padding: 10px 20px;
   border-radius: 50px;
   border: none;
   border-bottom: 1px solid #ccc;
+  width: 300px;
 
 }
 
