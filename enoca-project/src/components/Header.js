@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Header() {
 
-
+    const [check, setCheck] = useState()
     let currentPage = window.location.pathname;
+
 
     return (
         <header className='header mt-4'>
+            <input type="checkbox" id="check" onChange={(e) => {
+                e.target.checked ? setCheck(true) : setCheck(false)
+            }} />
+            <label htmlFor="check" className="checkbtn">
+                <i className="fa-solid fa-bars"></i>
+            </label>
+
             <div className='header-head row'>
                 <h2 className='col-auto mr-auto'>Olcay Han Korkut</h2>
 
@@ -17,8 +25,9 @@ export default function Header() {
             </div>
 
 
+
             <nav className='navbar navbar-expand-lg navbar-light'>
-                <ul className="navbar-nav">
+                <ul className={!check ? "navbar-nav" : "navbar-nav-responsive"}>
                     <li className="nav-item ">
                         <a className="nav-link text-dark px-3" style={currentPage === "/" ? { backgroundColor: "#D6E4E5" } : { backgroundColor: "transparent" }} href="/" >Anasayfa</a>
                     </li>

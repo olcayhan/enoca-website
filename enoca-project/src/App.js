@@ -11,6 +11,7 @@ import Health from './components/categories/Health';
 import Science from './components/categories/Science';
 import Sport from './components/categories/Sport';
 import Technology from './components/categories/Technology';
+import About from './components/About';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/science" element={<Science />} />
           <Route path="/sports" element={<Sport />} />
           <Route path="/technology" element={<Technology />} />
+          <Route path="/about" element={<About />} />
 
 
 
